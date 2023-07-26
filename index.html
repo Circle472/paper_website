@@ -1,16 +1,32 @@
 ﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-    <title>論文題目</title>
+    <title>少樣本學習手寫字體生成模型</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.lp.css">
 	<link rel="stylesheet" type="text/css" href="css/landing-page.css">
 	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic">
 	<link rel="stylesheet" type="text/css" href="css/styleTest.css">
+    <script src="https://d3js.org/d3.v7.min.js" charset="utf-8"></script>
+    <style type="text/css">
+        .main, .section-heading, h1, h2 {
+            font-family: 'CircleFont_v2';
+        }
+        a, .navbar-brand, .network-name {
+            font-size: 17px;
+        }
+        .lead {
+            font-size: 20px;
+        }
+        @font-face {
+            font-family: CircleFont_v2;
+            src: url(CircleFont_v2.ttf);
+        }
+    </style>
 </head>
 
-<body>
+<body class="main">
 	<!----------------------------------- Dividing line----------------------------------------------------->
 	
 	<!-- Navigation -->
@@ -39,10 +55,13 @@
                         <a href="#demo1">摘要</a>
                     </li>
 					<li>
-                        <a href="#demo2">引用文獻</a>
+                        <a href="#demo2">系統概要與生成結果</a>
                     </li>
                     <li>
-                        <a href="#demo3">示範</a>
+                        <a href="#demo3">手寫資料集</a>
+                    </li>
+                    <li>
+                        <a href="#demo4">簡介影片</a>
                     </li>
 					
                 </ul>
@@ -61,13 +80,14 @@
             <div class="row">
                 <div class="col-lg-12" style="height:300px;">
                     <div class="intro-message" style="position: relative;padding-top: 0%;padding-bottom: 70%;">
-                        <h1>論文題目</h1>
+                        <h1>少樣本學習手寫字體生成模型</h1>
+                        <h2>Few-Shot Learning Handwritten Font Generative Model</h2>
                         <ul class="list-inline intro-social-buttons">
-                            <li>
+                            <!-- <li>
                                 <a href="demo.html" class="btn btn-default btn-lg"> 
                                     <span class="network-name" style="font-weight: 900;">進入系統</span>
                                 </a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -89,11 +109,11 @@
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
 					<h2 class="section-heading">摘要 <img src="https://raw.githubusercontent.com/Circle472/paper_website/main/circle.svg" style="width: 100px"> </h2>
-					<p class="lead">內文內文內文內文內文內文內文內文內文內文</p>
+					<p class="lead">本研究採用基於機器學習的編碼-解碼模型(Encoder-Decoder)架構，將輸入影像轉換為潛在表示並解碼為生成的手寫字影像。這種架構能從現有手寫字影像中學習風格特徵，並生成相似風格的新手寫字影像。一旦訓練好生成模型，就能由少數樣本自動生成整套具有個人風格的手寫字體。雖然手寫字體能更好地表達個人風格並彌補資訊社會的冷漠感，但生成手寫字體需要大量人力和時間。前期需人工書寫大量文字，後期也要進行複雜的程式處理，才能生成一套完整的手寫字體。為了解決手寫字生成的繁瑣問題，本研究使用全新設計稿紙，收集了六十八人的大五碼(Big5)手寫字樣本，構建了包含 924,732 字的六十八人 Big5 手寫字體資料集作為本研究的基礎資料。接著通過生成模型進行少樣本學習，從少數字學習手寫風格並自動生成大量文字的手寫字。本研究節省了人力和時間，同時提高了手寫字體生成的效率。</p>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
 					<br><br><br>
-                    <img class="img-responsive" src="img/dog.png" alt="">
+                    <img class="img-responsive" src="img/1.png" alt="">
                 </div>
             </div>
 
@@ -111,12 +131,13 @@
                 <div class="col-lg-5 col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
-                    <h2 class="section-heading">引用文獻</h2>
-					<p class="lead">內文內文內文內文內文內文內文內文內文內文</p>
+                    <h2 class="section-heading">系統概要與生成結果</h2>
+					<p class="lead">本研究收集了六十八人的大五碼(Big5)手寫字樣本，構建了包含 924,732 字的六十八人 Big5 手寫字體資料集。並且接著通過生成模型進行少樣本學習，從少數樣本學習手寫風格並自動生成大量的手寫字。</p>
+                    <p class="lead">本研究所使用的生成模型方法為 MX-Font 和 字到字 (zi2zi)，生成結果如圖所示。</p>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
 					<br><br><br>
-                    <img class="img-responsive" src="img/ipad.png" alt="">
+                    <img class="img-responsive" src="img/2.png" alt="">
                 </div>
             </div>
 
@@ -126,7 +147,7 @@
     </div>
     <!-- /.content-section-a -->
 	
-	<a name="demo3"></a>
+    <a name="demo3"></a>
 	<div class="content-section-a">
 
         <div class="container">
@@ -134,12 +155,129 @@
                 <div class="col-lg-5 col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
-					<h2 class="section-heading">示範</h2>
-					<p class="lead">內文內文內文內文內文內文內文內文內文內文</p>
+					<h2 class="section-heading">手寫資料集</h2>
+					<h3 class="section-heading">北京大學 EasyFont 論文系統製作 CircleFont version_1</h3>
+                    <p class="lead" style="font-weight: bold; color:olive">字數： 3515 字</p>
+                    <ul class="list-inline intro-social-buttons">
+                        <li>
+                            <a href="https://github.com/Circle472/ct2022s/raw/main/hw04/CircleFont.ttf" class="btn btn-default btn-lg"> 
+                                <span class="network-name" style="font-weight: 900;">字體下載 DOWNLOAD</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./pku_scripts.zip" class="btn btn-default btn-lg"> 
+                                <span class="network-name" style="font-weight: 900;">稿紙 ZIP</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://raw.githubusercontent.com/Circle472/ct2022s/main/hw04/CircleFont_%E6%94%B6%E9%8C%84%E5%AD%97%E5%85%83.txt" class="btn btn-default btn-lg" target="_blank"> 
+                                <span class="network-name" style="font-weight: 900;">收錄字元</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="CircleTable.html" class="btn btn-default btn-lg" target="_blank"> 
+                                <span class="network-name" style="font-weight: 900;">收錄時間</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
 					<br><br><br>
-                    <img class="img-responsive" src="img/phones.png" alt="">
+                    <img class="img-responsive" src="img/Circle1.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+    <a name="demo3"></a>
+	<div class="content-section-a">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h3 class="section-heading">北京大學 EasyFont 論文系統製作 CircleFont version_2</h3>
+                    <p class="lead" style="font-weight: bold; color:olive">字數： 5275 字</p>
+                    <ul class="list-inline intro-social-buttons">
+                        <li>
+                            <a href="https://github.com/Circle472/ct2022s/raw/main/hw04/CircleFont_v2.ttf" class="btn btn-default btn-lg"> 
+                                <span class="network-name" style="font-weight: 900;">字體下載 DOWNLOAD</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://raw.githubusercontent.com/Circle472/ct2022s/main/hw04/CircleFont_v2_%E6%94%B6%E9%8C%84%E5%AD%97%E5%85%83.txt" class="btn btn-default btn-lg" target="_blank"> 
+                                <span class="network-name" style="font-weight: 900;">收錄字元</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="CircleTable_v2.html" class="btn btn-default btn-lg" target="_blank"> 
+                                <span class="network-name" style="font-weight: 900;">收錄時間</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+					<br><br><br>
+                    <img class="img-responsive" src="img/Circle2.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+    <a name="demo3"></a>
+	<div class="content-section-a">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h3 class="section-heading">北科大方法製作 Circle_NTUT</h3>
+                    <p class="lead" style="font-weight: bold;">收錄字元： Big5 編碼 (CP950)</p>
+                    <ul class="list-inline intro-social-buttons">
+                        <li>
+                            <a href="./CircleNTUT.ttf" class="btn btn-default btn-lg"> 
+                                <span class="network-name" style="font-weight: 900;">字體下載</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+					<br><br><br>
+                    <img class="img-responsive" src="img/ntut_script.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+	<a name="demo4"></a>
+	<div class="content-section-a">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+					<h2 class="section-heading">簡介影片</h2>
+					<p class="lead">本論文之說明影片，包括研究背景概述、資料集製作、研究中所使用的生成模型方法與生成結果，以及生成結果的相似度計算比對。</p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+					<br><br><br>
+                    <!-- <img class="img-responsive" src="img/phones.png" alt=""> -->
+                    <video controls autoplay width="1080" class="img-responsive" src="video/HandwrittenFontGenerativeModel.mp4"></video>
                 </div>
             </div>
 
