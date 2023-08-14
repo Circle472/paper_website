@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CP950</title>
+        <meta charset="utf-8">
+        <style>
+            body {
+                background-color: #fff;
+                color: #444;
+            }
+            a {
+                color: #08f;
+            }
+            p {
+                font-size: 24px;
+            }
+        </style>
+    </head>
+    <body>
+        <!--SVG-->
+        <!-- <embed src="./1.svg" type="image/svg+xml" /> -->
+        <p id="font"></p>
+        <script type="module">
+            let cp950_data;
+            readJson('./CP950.json');
+            function readJson( file_name ) {
+                let json_file = new XMLHttpRequest();
+                json_file.open("GET", file_name, false);
+                json_file.send(null);
+                if ( json_file.readyState == 4 && json_file.status == 200 ) {
+                    var temp = json_file.response;
+                    cp950_data = JSON.parse(temp);
+                    // console.log(temp);
+                }
+            }
+            for (let i = 0; i < 13759; i++) { // 13759
+                let unicode = cp950_data.CP950[i];
+                // console.log(unicode['UNICODE']); // ex: 0x1234
+                let unicode_num = unicode['UNICODE'].split('0x');
+                // console.log(unicode_num[1]); // ex: 1234
+                let e_uni = '&#x' + unicode_num[1];
+                console.log(e_uni); // ex: &#x1234
+                if (e_uni == '&#xundefined')
+                    document.getElementById("font").innerHTML += "";
+                else
+                    document.getElementById("font").innerHTML += e_uni;
+            }
+        </script>
+    </body>
+</html>
