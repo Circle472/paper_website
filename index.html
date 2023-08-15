@@ -105,13 +105,13 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-lg-5 col-sm-6">
+                <div class="col-lg-6 col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
 					<h2 class="section-heading">摘要 <img src="https://raw.githubusercontent.com/Circle472/paper_website/main/circle.svg" style="width: 100px"> </h2>
 					<p class="lead">本研究採用基於機器學習的編碼-解碼模型(Encoder-Decoder)架構，將輸入影像轉換為潛在表示並解碼為生成的手寫字影像。這種架構能從現有手寫字影像中學習風格特徵，並生成相似風格的新手寫字影像。一旦訓練好生成模型，就能由少數樣本自動生成整套具有個人風格的手寫字體。雖然手寫字體能更好地表達個人風格並彌補資訊社會的冷漠感，但生成手寫字體需要大量人力和時間。前期需人工書寫大量文字，後期也要進行複雜的程式處理，才能生成一套完整的手寫字體。為了解決手寫字生成的繁瑣問題，本研究使用全新設計稿紙，收集了六十八人的大五碼(Big5)手寫字樣本，構建了包含 924,732 字的六十八人 Big5 手寫字體資料集作為本研究的基礎資料。接著通過生成模型進行少樣本學習，從少數字學習手寫風格並自動生成大量文字的手寫字。本研究節省了人力和時間，同時提高了手寫字體生成的效率。</p>
                 </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-6">
 					<br><br><br>
                     <img class="img-responsive" src="img/1.png" alt="">
                 </div>
@@ -128,14 +128,14 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-lg-5 col-sm-6">
+                <div class="col-lg-6 col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <h2 class="section-heading">系統概要與生成結果</h2>
 					<p class="lead">本研究收集了六十八人的大五碼(Big5)手寫字樣本，構建了包含 924,732 字的六十八人 Big5 手寫字體資料集。並且接著通過生成模型進行少樣本學習，從少數樣本學習手寫風格並自動生成大量的手寫字。</p>
                     <p class="lead">本研究所使用的生成模型方法為 MX-Font 和 字到字 (zi2zi)，生成結果如圖所示。</p>
                 </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-6">
 					<br><br><br>
                     <img class="img-responsive" src="img/2.png" alt="">
                 </div>
@@ -258,7 +258,7 @@
                         </li>
                         <li>
                             <a href="https://github.com/TaylorNTUT/CharacterAlignerScaler/tree/main" class="btn btn-default btn-lg" target="_blank"> 
-                                <span class="network-name" style="font-weight: 900;">2-2 校正切割 (電子適用)</span>
+                                <span class="network-name" style="font-weight: 900;">2-2 切割 (電子適用)</span>
                             </a>
                         </li>
                         <li>
@@ -286,12 +286,12 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-lg-5 col-sm-6">
+                <div class="col-lg-7 col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <h3 class="section-heading">北科大方法製作結果</h3>
                     <ul class="list-inline intro-social-buttons">
-                    <p class="lead" style="font-weight: bold;">CircleNTUT <img src="https://raw.githubusercontent.com/Circle472/paper_website/main/CC0_button.svg" style="width: 100px"> : 有放大置中</p>
+                    <p class="lead" style="font-weight: bold;">CircleNTUT <img src="https://raw.githubusercontent.com/Circle472/paper_website/main/CC0_button.svg" style="width: 100px"> : 有放大置中&nbsp;<img src="./U+6236/U+6236_v1.png" style="width: 40px; border:2px chocolate solid;"></p>
                         <li>
                             <a href="./CircleNTUT.ttf" class="btn btn-default btn-lg"> 
                                 <span class="network-name" style="font-weight: 900;">字體下載 DOWNLOAD</span>
@@ -305,6 +305,16 @@
                                 <span class="network-name" style="font-weight: 900;">字體下載 DOWNLOAD</span>
                             </a>
                         </li>
+                        <li>
+                            <a href="./code/v2/01_crop_page.py" class="btn btn-default btn-lg"> 
+                                <span class="network-name" style="font-weight: 900;">01_crop_page.py</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./code/v2/02_align.py" class="btn btn-default btn-lg"> 
+                                <span class="network-name" style="font-weight: 900;">02_align.py</span>
+                            </a>
+                        </li>
                     </ul>
                     <ul class="list-inline intro-social-buttons">
                     <p class="lead" style="font-weight: bold;">CircleNTUT_v3 <img src="https://raw.githubusercontent.com/Circle472/paper_website/main/CC0_button.svg" style="width: 100px"> : 置中並放大 1.2 倍率</p>
@@ -313,17 +323,40 @@
                                 <span class="network-name" style="font-weight: 900;">字體下載 DOWNLOAD</span>
                             </a>
                         </li>
+                        <li>
+                            <a href="./code/v3/02_align_and_scale.py" class="btn btn-default btn-lg"> 
+                                <span class="network-name" style="font-weight: 900;">02_align_and_scale.py</span>
+                            </a>
+                        </li>
                     </ul>
                     <ul class="list-inline intro-social-buttons">
-                        <p class="lead" style="font-weight: bold;">CircleNTUT_v4 <img src="https://raw.githubusercontent.com/Circle472/paper_website/main/CC0_button.svg" style="width: 100px"> : 找到最大邊長的 bounding box 長度減 10 進行同倍率縮放</p>
-                            <li>
-                                <a href="./CircleNTUT_v3.ttf" class="btn btn-default btn-lg"> 
-                                    <span class="network-name" style="font-weight: 900;">字體下載 DOWNLOAD</span>
-                                </a>
-                            </li>
-                        </ul>
+                    <p class="lead" style="font-weight: bold;">CircleNTUT_v4 <img src="https://raw.githubusercontent.com/Circle472/paper_website/main/CC0_button.svg" style="width: 100px"> : 找到最大邊長的 bounding box 長度減 10 進行同倍率縮放&nbsp;<img src="./U+6236/U+6236_v4.png" style="width: 40px; border:2px chocolate solid;"></p>
+                        <li>
+                            <a href="./CircleNTUT_v4.ttf" class="btn btn-default btn-lg"> 
+                                <span class="network-name" style="font-weight: 900;">字體下載 DOWNLOAD</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./code/v4/s2_crop_page.py" class="btn btn-default btn-lg"> 
+                                <span class="network-name" style="font-weight: 900;">s2_crop_page.py</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="list-inline intro-social-buttons">
+                    <p class="lead" style="font-weight: bold;">CircleNTUT_v5 <img src="https://raw.githubusercontent.com/Circle472/paper_website/main/CC0_button.svg" style="width: 100px"> : 找到最大邊長的 bounding box 長度減 30 進行同倍率縮放&nbsp;<img src="./U+6236/U+6236_v5.png" style="width: 40px; border:2px chocolate solid;"></p>
+                        <li>
+                            <a href="./CircleNTUT_v5.ttf" class="btn btn-default btn-lg"> 
+                                <span class="network-name" style="font-weight: 900;">字體下載 DOWNLOAD</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./code/v5/s2_crop_page.py" class="btn btn-default btn-lg"> 
+                                <span class="network-name" style="font-weight: 900;">s2_crop_page.py</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                <div class="col-lg-5 col-sm-6">
 					<br><br><br>
                     <img class="img-responsive" src="img/ntut_script.png" alt="">
                 </div>
@@ -361,7 +394,7 @@
 
     <div class="container">
         <h2 class="section-heading">CircleNTUT 改革演變說明</h2>
-        <a href="https://docs.google.com/presentation/d/1vCpsUvN9dxC7fUO5c83k_D_5NMcYbcF2/edit?usp=sharing&ouid=115910513313978178049&rtpof=true&sd=true" target="_blank">原始 PowerPoint 下載</a><br>
+        <a href="https://docs.google.com/presentation/d/1haW68RxZSlaHzt0xWej67kT35QhW1N_4/edit?usp=sharing&ouid=115910513313978178049&rtpof=true&sd=true" target="_blank">原始 PowerPoint 下載</a><br>
         <iframe src="CircleNTUT.pdf" width="800px" height="700px"></iframe>
     </div>
     <br><br>
